@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zegar szachowy</title>
+	<link rel="stylesheet" type="text/css" href="styl.css">	
+</head>
+<body>
+	<div class="ekran_startowy">
+		<h2>Ustaw czas rozgrywki:</h2>
+		<div class="plansza_czasu usuwalny">
+			<div class="czas_rozgrywki">
+				<p>10:00</p>
+			</div>
+			<div class="przyciski_czasu">
+				<button class="wiecej_czasu" onclick="wiecejCzasu()">+</button>
+				<button class="mniej_czasu" onclick="mniejCzasu()">-</button>
+			</div>
+		</div>
+		<button class="starter" onclick="startujZegar()"> START </button>		
+	</div>
+	<div class="podklad usuwalny">
+		<div class="bialy">
+			<div class="zawodnik zawodnik_gra" onclick="koniec_ruchu('bialy')">
+				<h1 id="widok_bialy" class="aktywny"></h1>
+			</div>
+		</div>
+		<div class="czarny">
+			<div class="zawodnik zawodnik_czeka" onclick="koniec_ruchu('czarny')">
+				<h1 id="widok_czarny" class="pauza"></h1>
+			</div>
+		</div>
+		<div id="liczba_ruchow"></div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="zegar.js"></script>
+</body>
+</html>
